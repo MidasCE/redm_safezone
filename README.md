@@ -6,4 +6,4 @@ Add ensure redm_safezone to server.cfg
 
 Modified config file to add your own safezone location.
 
-This resource is modified from FiveM repository : https://github.com/ALongPantsMan/SafeZonev2 by ALongPantsMan
+This resource is have an original from FiveM repository : https://github.com/ALongPantsMan/SafeZonev2 by ALongPantsMan, I made this code by changing many Native Code for redM project, that's why I decided to create separate repo.
