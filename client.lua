@@ -72,3 +72,12 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+local function ShowNotification( _message )
+	local timer = 200
+	while timer > 0 do
+		DisplayHelp(_message, 0.50, 0.90, 0.6, 0.6, true, 161, 3, 0, 255, true, 10000)
+		timer = timer - 1
+		Citizen.Wait(0)
+	end
+end
