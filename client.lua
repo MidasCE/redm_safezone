@@ -50,14 +50,14 @@ Citizen.CreateThread(function()
 			if not notificationInSafeZone then
 				NetworkSetFriendlyFireOption(false)
 				ClearPlayerWantedLevel(PlayerId())
-				print("You are in a safe zone.")
+				ShowNotification("You are in a safe zone.")
 				notificationInSafeZone = true
 				notificationOutSafeZone = false
 			end
 		else
 			if not notifOut then
 				NetworkSetFriendlyFireOption(true)
-				print("You leaving the safe zone.")
+				ShowNotification("You leaving the safe zone.")
 				notificationOutSafeZone = true
 				notificationInSafeZone = false
 			end
@@ -66,8 +66,8 @@ Citizen.CreateThread(function()
 			DisablePlayerFiring(playerPed, true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
       		DisableControlAction(0, 0x07CE1E61, true) -- Disable attack  control
       		DisableControlAction(0, 0xB2F377E8, true) -- Disable MeleeAttack control
-			if IsDisabledControlJustPressed(0, 0x07CE1E61) or IsDisabledControlJustPressed(0, 0xB2F377E8) then 
-				print("You can not do that in safe zone.")
+			if IsDisabledControlJustPressed(0, 0x07CE1E61) or IsDisabledControlJustPressed(0, 0xB2F377E8) then 	
+				ShowNotification("You can not do that in safe zone.")
 			end
 		end
 	end
